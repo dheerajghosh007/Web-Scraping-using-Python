@@ -2,7 +2,7 @@
 
 import requests
 from bs4 import BeautifulSoup
-url = "https://codewithharry.com"
+url = "https://localhackday.mlh.io/build"
 
 # Step 1: Get the HTML
 r = requests.get(url)
@@ -53,7 +53,7 @@ all_links = set()
 # Get all the links on the page:
 for link in anchors:
     if(link.get('href') != '#'): 
-        linkText = "https://codewithharry.com" +link.get('href')
+        linkText = "https://localhackday.mlh.io/build" +link.get('href')
         all_links.add(link)
         # print(linkText)
 
